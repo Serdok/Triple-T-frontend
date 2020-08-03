@@ -5,14 +5,14 @@
         {{ title }}
       </a>
     </div>
-    <div class="navbar-burger" data-target="navbarMenu">
+    <div id="navbar-burger" class="navbar-burger" data-target="navbar-menu" (click)="this.changeNavbar()">
       <span></span>
       <span></span>
       <span></span>
     </div>
 
     <!-- Define navbar items -->
-    <div id="navbarMenu" class="navbar-menu">
+    <div id="navbar-menu" class="navbar-menu">
       <div class="navbar-start">
         <a class="navbar-item" href="/">
           <fa-icon [icon]="faHome"></fa-icon>
@@ -35,7 +35,9 @@
 </header>
 
 <main class="section">
-
+  <div class="container">
+    <app-board [xIsNext]="game.xIsNext" [tiles]="game.tiles  "></app-board>
+  </div>
 </main>
 
 <footer class="section footer">
