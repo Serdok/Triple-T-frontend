@@ -1,0 +1,3 @@
+<button class="button is-inverted" *ngIf="!value">{{ value }}</button>
+<button class="button is-link" *ngIf="value === 'X'" disabled>{{ value }}</button>
+<button class="button is-danger" *ngIf="value === 'O'" disabled>{{ value }}</button>
