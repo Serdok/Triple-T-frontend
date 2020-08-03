@@ -1,0 +1,11 @@
+<div class="state level">
+  <p class="next-player level-item" *ngIf="!winner && !isDraw">{{ player }}'s turn!</p>
+
+  <p class="win level-item" *ngIf="winner">{{ winner }} won!</p>
+  <p class="draw level-item" *ngIf="!winner && isDraw">Draw!</p>
+  <fa-icon class="icon level-item" [icon]="faRedo" (click)="reset()" *ngIf="winner || isDraw"></fa-icon>
+</div>
+
+<div class="tiles">
+  <app-tile *ngFor="let value of tiles; let i = index" [value]="value" (click)="this.onClick(i)"></app-tile>
+</div>

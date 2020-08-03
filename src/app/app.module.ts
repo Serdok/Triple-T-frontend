@@ -5,10 +5,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TileComponent } from './tile/tile.component';
+import { BoardComponent } from './board/board.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TileComponent,
+    BoardComponent,
   ],
   imports: [
     BrowserModule,
